@@ -20,6 +20,7 @@ int main() {
 
 
 bool check(int32_t n) {
+  // check for n >= 0
   if (n <= 0) {
     return false;
   } else {
@@ -29,6 +30,7 @@ bool check(int32_t n) {
 
 
 void sum_sqr(int32_t n) {
+    // sum sqrs from 1 to n
     int32_t s = 0;
 
     for (int32_t i = 1; i <= n; ++i) {
