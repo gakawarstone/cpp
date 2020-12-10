@@ -12,9 +12,8 @@ void simple_eragosphen(int32_t n);
 int main() {
   int32_t n;
   cin >> n;
-  int32_t *A;
   cout << simple(n) << endl;
-  simple_eragosphen(n);
+  simple_eragosphen(n); // output in func show_mass
   return 0;
 }
 
@@ -48,7 +47,7 @@ void simple_eragosphen(int32_t n) {
     A[i] = i;
   }
 
-  for (int i = 2; i < sqrt(n); ++i) { //
+  for (int i = 2; i < sqrt(n); ++i) { // eragosphen alghorithm
     for (int k = i*i; k < n; k += i) {
       A[k] = 0;
     }
