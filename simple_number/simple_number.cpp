@@ -1,6 +1,8 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+/* make functions basic simple
+   make function returns mass */
 
 void show_mass(int32_t *a);
 bool simple(int32_t n);
@@ -17,9 +19,11 @@ int main() {
 }
 
 
-void show_mass(int32_t *A, int32_t n) {
-  for (int i = 0; i < n; ++i) {
-    cout << A[i] << ' ';
+void show_mass(int32_t *A, int32_t n) { // use in case return to
+  for (int i = 2; i < n; ++i) {         // console mass with numbers
+    if (A[i]) {                         // and zeros return numbers
+      cout << A[i] << "\t ";            // starts index 2
+    }
   }
 
   cout << endl;
@@ -40,12 +44,12 @@ bool simple(int32_t n) { // test number for simple flag method
 
 void simple_eragosphen(int32_t n) {
   int32_t A[n];
-  for (int i = 0; i < n; ++i) {
-    A[i] = i + 1;
+  for (int i = 0; i < n; ++i) { // fill mass for [1, 2, ... , n]
+    A[i] = i;
   }
 
-  for (int i = 2; i < sqrt(n); ++i) {
-    for (int k = 2*i - 1; k < n; k += i) {
+  for (int i = 2; i < sqrt(n); ++i) { //
+    for (int k = i*i; k < n; k += i) {
       A[k] = 0;
     }
   }
