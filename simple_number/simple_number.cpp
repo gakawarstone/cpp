@@ -2,7 +2,8 @@
 #include <math.h>
 using namespace std;
 /* make functions basic simple
-   make function returns mass */
+   make function returns mass
+   refactor mass to vector */
 
 void show_mass(int32_t *a);
 bool simple(int32_t n);
