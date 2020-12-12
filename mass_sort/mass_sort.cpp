@@ -23,4 +23,27 @@ int main() {
 
   std::cout << std::endl;
 
+  bool is_sorted = false;
+
+  while (not is_sorted) { // bubble sort
+    is_sorted = true;
+
+    for (int i = 0; i < top - 1; ++i) {
+      if (A[i] > A[i + 1]) {
+        int32_t tmp;
+        tmp = A[i];
+        A[i] = A[i + 1];
+        A[i + 1] = tmp;
+        is_sorted = false;
+      }
+    }
+  }
+
+  for (int i = 0; i < top; ++i) { // print mass
+    std::cout << A[i] << ' ';
+  }
+
+  std::cout << std::endl;
+
+  return 0;
 }
