@@ -16,12 +16,9 @@ int main() {
   std::cout << bnm_pair.x; // outp first number
 
   for (int i = 0; i < n; ++i) {
-    int32_t tmp;
     bnm_pair.y = bnm_pair.x * (n - i)/(i + 1);
     std::cout << " " << bnm_pair.y;
-    tmp = bnm_pair.x; // remember old x
     bnm_pair.x = bnm_pair.y; // y displace x
-    bnm_pair.y = tmp + bnm_pair.y; // y = sum(x, y)
   }
 
   std::cout << std::endl;
