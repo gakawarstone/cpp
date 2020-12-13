@@ -10,7 +10,7 @@ struct pair_t {
 int main() {
   int32_t n; // init how many numbers to write
   pair_t bnm_pair; // init biniminal k pair
-  bnm_pair.x = 1; // first biniominal k
+  bnm_pair.x = 1; // first binominal k
 
   std::cin >> n; // read n
   std::cout << bnm_pair.x; // outp first number
