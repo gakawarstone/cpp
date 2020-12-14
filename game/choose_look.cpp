@@ -2,19 +2,19 @@
 #include <iso646.h>
 #include <string>
 
-int8_t choose(int8_t param);
-
 struct look {
   int8_t race;
 };
 
-
-struct choice_of {
+struct choice_t {
    std::string first;
    std::string second;
    std::string third;
    std::string fourth;
 };
+
+std::string choose(choice_t ch);
+
 
 int main() {
   std::cout << ">>> ";
@@ -31,14 +31,19 @@ int main() {
   std::cout << "стоит твой выбор";
   getchar(); // wait for ENTER
 
+  choice_t race_ch;
+  race_ch.first = "Негр";
+  race_ch.second = "Сущность в виде гномика";
+  race_ch.third = "Негро эльф";
+  race_ch.fourth = "Негрованогеноромаруснил";
   std::cout << ">>> ";
-  std::cout << "1. Негр" << std::endl;
+  std::cout << "1. " << race_ch.first << std::endl;
   std::cout << ">>> ";
-  std::cout << "2. Сущность в виде гномика" << std::endl;
+  std::cout << "2. " << race_ch.second << std::endl;
   std::cout << ">>> ";
-  std::cout << "3. Негро эльф" << std::endl;
+  std::cout << "3. " << race_ch.third << std::endl;
   std::cout << ">>> ";
-  std::cout << "4. Негрованогеноромаруснил" << std::endl;
+  std::cout << "4. " << race_ch.fourth << std::endl;
   getchar(); // wait for ENTER
 
 
