@@ -34,7 +34,7 @@ int main() {
   choice_t race_ch;
   race_ch.first = "Негр";
   race_ch.second = "Сущность в виде гномика";
-  race_ch.third = "Негро эльф";
+  race_ch.third = "Негроэльф";
   race_ch.fourth = "Негрованогеноромаруснил";
   std::cout << ">>> ";
   std::cout << "1. " << race_ch.first << std::endl;
@@ -44,9 +44,38 @@ int main() {
   std::cout << "3. " << race_ch.third << std::endl;
   std::cout << ">>> ";
   std::cout << "4. " << race_ch.fourth << std::endl;
+  std::cout << ">>> ";
+  std::string pers_race = choose(race_ch);
+  std::cout << ">>> " << pers_race << std::endl;
   getchar(); // wait for ENTER
 
-
-  while(1);
   return 0;
+}
+
+
+std::string choose(choice_t ch) {
+  int8_t n; // number from console
+  std::string str_outp; // otput string
+
+  std::cin >> n;
+
+  switch (n) {
+    case '1':
+        str_outp = ch.first;
+        break;
+    case '2':
+        str_outp = ch.second;
+        break;
+    case '3':
+        str_outp = ch.third;
+        break;
+    case '4':
+        str_outp = ch.fourth;
+        break;
+    default:
+        str_outp = ch.first;
+        break;
+  }
+
+  return str_outp;
 }
