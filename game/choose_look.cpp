@@ -2,8 +2,10 @@
 #include <iso646.h>
 #include <string>
 
-struct look {
-  int8_t race;
+class Player {
+  public:
+    std::string race;
+    std::string gender;
 };
 
 struct choice_t {
@@ -17,6 +19,8 @@ std::string choose(choice_t ch);
 
 
 int main() {
+  Player player;
+
   std::cout << ">>> ";
   std::cout << "Это выбор внешности надеюсь он будет не на ";
   std::cout << "70000 строчек";
@@ -36,8 +40,17 @@ int main() {
   race_ch.second = "Сущность в виде гномика";
   race_ch.third = "Негроэльф";
   race_ch.fourth = "Негрованогеноромаруснил";
-  std::string pers_race = choose(race_ch);
-  std::cout << ">>> " << pers_race << std::endl;
+  player.race = choose(race_ch);
+  std::cout << ">>> " << player.race << std::endl;
+  getchar(); // wait for ENTER
+
+  choice_t gender_ch;
+  gender_ch.first = "Цисгендерный спермобак";
+  gender_ch.second = "Боевой вертолет";
+  gender_ch.third = "Коммунист";
+  gender_ch.fourth = "Нога Шарифова";
+  player.gender = choose(gender_ch);
+  std::cout << ">>> " << player.gender << std::endl;
   getchar(); // wait for ENTER
 
   return 0;
