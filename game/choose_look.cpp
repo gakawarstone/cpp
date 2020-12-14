@@ -36,15 +36,6 @@ int main() {
   race_ch.second = "Сущность в виде гномика";
   race_ch.third = "Негроэльф";
   race_ch.fourth = "Негрованогеноромаруснил";
-  std::cout << ">>> ";
-  std::cout << "1. " << race_ch.first << std::endl;
-  std::cout << ">>> ";
-  std::cout << "2. " << race_ch.second << std::endl;
-  std::cout << ">>> ";
-  std::cout << "3. " << race_ch.third << std::endl;
-  std::cout << ">>> ";
-  std::cout << "4. " << race_ch.fourth << std::endl;
-  std::cout << ">>> ";
   std::string pers_race = choose(race_ch);
   std::cout << ">>> " << pers_race << std::endl;
   getchar(); // wait for ENTER
@@ -57,6 +48,15 @@ std::string choose(choice_t ch) {
   int8_t n; // number from console
   std::string str_outp; // otput string
 
+  std::cout << ">>> ";
+  std::cout << "1. " << ch.first << std::endl;
+  std::cout << ">>> ";
+  std::cout << "2. " << ch.second << std::endl;
+  std::cout << ">>> ";
+  std::cout << "3. " << ch.third << std::endl;
+  std::cout << ">>> ";
+  std::cout << "4. " << ch.fourth << std::endl;
+  std::cout << ">>> ";
   std::cin >> n;
 
   switch (n) {
