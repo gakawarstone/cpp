@@ -41,7 +41,7 @@ int main() {
   race_ch.third = "Негроэльф";
   race_ch.fourth = "Негрованогеноромаруснил";
   player.race = choose(race_ch);
-  std::cout << ">>> " << player.race << std::endl;
+  std::cout << ">>> Ваш выбор: " << player.race << std::endl;
   getchar(); // wait for ENTER
 
   std::cout << ">>> ";
@@ -54,7 +54,7 @@ int main() {
   gender_ch.third = "Коммунист";
   gender_ch.fourth = "Нога Шарифова";
   player.gender = choose(gender_ch);
-  std::cout << ">>> " << player.gender << std::endl;
+  std::cout << ">>> Ваш выбор: " << player.gender << std::endl;
   getchar(); // wait for ENTER
 
   std::cout << ">>> ";
@@ -67,8 +67,14 @@ int main() {
   estate_ch.third = "Земледелец";
   estate_ch.fourth = "Жрец";
   player.estate = choose(estate_ch);
-  std::cout << ">>> " << player.estate << std::endl;
+  std::cout << ">>> Ваш выбор: " << player.estate << std::endl;
   getchar(); // wait for ENTER
+
+  std::cout << ">>> ";
+  std::cout << "Ты закончил выбор внешности так подитожим" << '\n';
+  std::cout << ">>> " << "Твоя раса: " << player.race << std::endl;
+  std::cout << ">>> " << "Твой гендер: " << player.gender << std::endl;
+  std::cout << ">>> " << "Твоё сословие: " << player.estate << std::endl;
 
   return 0;
 }
