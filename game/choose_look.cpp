@@ -6,6 +6,7 @@ class Player {
   public:
     std::string race;
     std::string gender;
+    std::string estate;
 };
 
 struct choice_t {
@@ -32,8 +33,7 @@ int main() {
 
   std::cout << ">>> ";
   std::cout << "Для выбора расы напиши число возле которого ";
-  std::cout << "стоит твой выбор";
-  getchar(); // wait for ENTER
+  std::cout << "стоит твой выбор" << std::endl;
 
   choice_t race_ch;
   race_ch.first = "Негр";
@@ -44,6 +44,10 @@ int main() {
   std::cout << ">>> " << player.race << std::endl;
   getchar(); // wait for ENTER
 
+  std::cout << ">>> ";
+  std::cout << "Для выбора гендера напиши число возле которого ";
+  std::cout << "стоит твой выбор" << std::endl;
+
   choice_t gender_ch;
   gender_ch.first = "Цисгендерный спермобак";
   gender_ch.second = "Боевой вертолет";
@@ -51,6 +55,19 @@ int main() {
   gender_ch.fourth = "Нога Шарифова";
   player.gender = choose(gender_ch);
   std::cout << ">>> " << player.gender << std::endl;
+  getchar(); // wait for ENTER
+
+  std::cout << ">>> ";
+  std::cout << "Для выбора сословия напиши число возле которого ";
+  std::cout << "стоит твой выбор" << std::endl;
+
+  choice_t estate_ch;
+  estate_ch.first = "Купец";
+  estate_ch.second = "Дворянин";
+  estate_ch.third = "Земледелец";
+  estate_ch.fourth = "Жрец";
+  player.estate = choose(estate_ch);
+  std::cout << ">>> " << player.estate << std::endl;
   getchar(); // wait for ENTER
 
   return 0;
