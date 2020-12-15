@@ -7,6 +7,7 @@ class Player {
     std::string race;
     std::string gender;
     std::string estate;
+    std::string type;
 };
 
 struct choice_t {
@@ -68,6 +69,18 @@ int main() {
   estate_ch.fourth = "Жрец";
   player.estate = choose(estate_ch);
   std::cout << ">>> Ваш выбор: " << player.estate << std::endl;
+
+  std::cout << ">>> ";
+  std::cout << "Для выбора класса напиши число возле которого ";
+  std::cout << "стоит твой выбор" << std::endl;
+
+  choice_t type_ch;
+  type_ch.first = "Воин";
+  type_ch.second = "Маг";
+  type_ch.third = "Разбойник";
+  type_ch.fourth = "Вор";
+  player.type = choose(type_ch);
+  std::cout << ">>> Ваш выбор: " << player.type << std::endl;
   getchar(); // wait for ENTER
 
   std::cout << ">>> ";
@@ -75,6 +88,9 @@ int main() {
   std::cout << ">>> " << "Твоя раса: " << player.race << std::endl;
   std::cout << ">>> " << "Твой гендер: " << player.gender << std::endl;
   std::cout << ">>> " << "Твоё сословие: " << player.estate << std::endl;
+  std::cout << ">>> " << "Твой класс: " << player.type << std::endl;
+
+  while(1);
 
   return 0;
 }
