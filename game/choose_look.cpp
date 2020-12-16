@@ -25,7 +25,7 @@ int main() {
 
   std::cout << ">>> ";
   std::cout << "Это выбор внешности надеюсь он будет не на ";
-  std::cout << "70000 строчек ";
+  std::cout << "70000 строчек";
   getchar(); // wait for ENTER
 
   std::cout << ">>> ";
