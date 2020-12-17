@@ -31,6 +31,6 @@ int main() {
   sleep(5);
   std::cout << "Hack: successful" << '\n';
   sleep(5);
-  std::cout << "Password: pidor" << '\n';
+  std::cout << "Password: Hello world!" << '\n';
   return 0;
 }
