@@ -1,8 +1,10 @@
 #include <iostream>
+
 using namespace std;
 
 int32_t d = 2;
 int32_t n;
+
 
 int main() {
   cin >> n;
@@ -16,6 +18,8 @@ int main() {
       d++;
     }
   }
+
+  cout << endl;
 
   return 0;
 }

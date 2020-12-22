@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -11,4 +12,6 @@ int main() {
     bnm[i + 1] = bnm[i] * (n - i)/(i + 1);
     cout << " " << bnm[i + 1];
   }
+
+  return 0;
 }
