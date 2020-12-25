@@ -7,7 +7,7 @@ const double M_IN_SZH = 2.16; // metrs in sazhen
 int main() {
   int32_t szh, arsh; // sazhen, arshin
   int32_t metr, smetr; // metr, santimetr
-  double szh_d; // sazhen double
+  double szh_d; // sazhen and arshin in sazhens
 
   std::cout << "Sazhens: ";
   std::cin >> szh;
