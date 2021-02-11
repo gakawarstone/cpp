@@ -17,7 +17,7 @@ struct choice_t {
    std::string fourth;
 };
 
-std::string choose(choice_t ch);
+std::string choose(choice_t ch); // declaration func
 
 
 int main() {
@@ -90,7 +90,7 @@ int main() {
   std::cout << ">>> " << "Твоё сословие: " << player.estate << std::endl;
   std::cout << ">>> " << "Твой класс: " << player.type << std::endl;
 
-  while(1);
+  getchar();
 
   return 0;
 }
